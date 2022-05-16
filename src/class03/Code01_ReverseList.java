@@ -39,6 +39,18 @@ public class Code01_ReverseList {
 		return pre;
 	}
 
+	public static Node reverse(Node head) {
+		Node pre = null;
+		Node curr = head;
+		while (curr != null) {
+			Node next = curr.next;
+			curr.next = pre;
+			pre = curr;
+			curr = next;
+		}
+		return pre;
+	}
+
 	public static DoubleNode reverseDoubleList(DoubleNode head) {
 		DoubleNode pre = null;
 		DoubleNode next = null;

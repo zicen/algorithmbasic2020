@@ -1,5 +1,5 @@
 package class04;
-
+//https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
 public class Code03_ReversePair {
 
 	public static int reverPairNumber(int[] arr) {
@@ -22,7 +22,7 @@ public class Code03_ReversePair {
 		return process(arr, l, mid) + process(arr, mid + 1, r) + merge(arr, l, mid, r);
 	}
 
-	public static int merge(int[] arr, int L, int m, int r) {
+	public static int merge1(int[] arr, int L, int m, int r) {
 		int[] help = new int[r - L + 1];
 		int i = help.length - 1;
 		int p1 = m;
@@ -37,6 +37,27 @@ public class Code03_ReversePair {
 		}
 		while (p2 > m) {
 			help[i--] = arr[p2--];
+		}
+		for (i = 0; i < help.length; i++) {
+			arr[L + i] = help[i];
+		}
+		return res;
+	}
+	public static int merge(int[] arr, int L, int m, int r) {
+		int[] help = new int[r - L + 1];
+		int i = 0;
+		int p1 = L;
+		int p2 = m + 1;
+		int res = 0;
+		while (p1 <=m && p2 <= r) {
+			res += arr[p1] > arr[p2] ? (m - p1 + 1) : 0;
+			help[i++] = arr[p1] > arr[p2] ? arr[p2++] : arr[p1++];
+		}
+		while (p1 <= m) {
+			help[i++] = arr[p1++];
+		}
+		while (p2 <= r) {
+			help[i++] = arr[p2++];
 		}
 		for (i = 0; i < help.length; i++) {
 			arr[L + i] = help[i];
