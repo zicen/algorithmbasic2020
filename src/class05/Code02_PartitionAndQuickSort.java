@@ -30,6 +30,22 @@ public class Code02_PartitionAndQuickSort {
 		return lessEqual;
 	}
 
+	private static int partition2(int[] nums, int startIndex, int endIndex) {
+		int random = startIndex + (int)(Math.random() * ((endIndex - startIndex) + 1));
+		swap(nums, startIndex, random);
+		int pivot = nums[startIndex];
+		int mark = startIndex;
+		//System.out.println("mark: " + mark);
+		for (int i = startIndex+1; i <= endIndex; i++) {
+			if (nums[i] < pivot) {
+				mark++;
+				swap(nums, i, mark);
+			}
+		}
+		swap(nums, startIndex, mark);
+		return mark;
+	}
+
 	// arr[L...R] 玩荷兰国旗问题的划分，以arr[R]做划分值
 	// <arr[R] ==arr[R] > arr[R]
 	public static int[] netherlandsFlag(int[] arr, int L, int R) {
@@ -70,7 +86,7 @@ public class Code02_PartitionAndQuickSort {
 			return;
 		}
 		// L..R partition arr[R] [ <=arr[R] arr[R] >arr[R] ]
-		int M = partition(arr, L, R);
+		int M = partition2(arr, L, R);
 		process1(arr, L, M - 1);
 		process1(arr, M + 1, R);
 	}

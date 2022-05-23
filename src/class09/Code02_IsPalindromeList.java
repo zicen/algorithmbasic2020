@@ -4,15 +4,6 @@ import java.util.Stack;
 
 public class Code02_IsPalindromeList {
 
-	public static class Node {
-		public int value;
-		public Node next;
-
-		public Node(int data) {
-			this.value = data;
-		}
-	}
-
 	// need n extra space
 	public static boolean isPalindrome1(Node head) {
 		Stack<Node> stack = new Stack<Node>();
