@@ -1,8 +1,7 @@
 package class09;
 
 import java.util.HashMap;
-
-// 测试链接 : https://leetcode.com/problems/copy-list-with-random-pointer/
+// 测试链接 : https://leetcode.com/problems/copy-list-with-random-pointer/ 拷贝随机数组
 public class Code04_CopyListWithRandom {
 
     private static class Node {
@@ -71,6 +70,37 @@ public class Code04_CopyListWithRandom {
             copy = cur.next;
             cur.next = next;
             copy.next = next != null ? next.next : null;
+            cur = next;
+        }
+        return res;
+    }
+
+    public Node copyRandom(Node head) {
+        if (head == null) return null;
+        //1. 从左到右生成副本节点 1->2->3-> null   1->1`->2->2`->3->3`->null
+        Node cur = head;
+        while (cur!=null) {
+            Node next = cur.next;
+            cur.next = new Node(cur.val);
+            cur.next.next = next;
+            cur = next;
+        }
+        //2. 从左到右设置副本节点的 rand 指针
+        cur = head;
+        while (cur != null) {
+            Node next = cur.next.next;
+            Node curCopy = cur.next;
+            curCopy.random = cur.random == null ? null : cur.random.next;
+            cur = next;
+        }
+        //3.拆开
+        cur = head;
+        Node res = head.next;
+        while (cur != null) {
+            Node next = cur.next.next;
+            Node curCopy = cur.next;
+            cur.next = next;
+            curCopy.next = next != null ? next.next : null;
             cur = next;
         }
         return res;

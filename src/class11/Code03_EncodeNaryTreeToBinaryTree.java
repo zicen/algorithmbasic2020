@@ -7,7 +7,7 @@ import java.util.List;
 public class Code03_EncodeNaryTreeToBinaryTree {
 
 	// 提交时不要提交这个类
-	public static class Node {
+	private static class Node {
 		public int val;
 		public List<Node> children;
 

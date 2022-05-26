@@ -2,7 +2,7 @@ package class11;
 
 public class Code04_PrintBinaryTree {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;

@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class Code03_UnRecursiveTraversalBT {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;

@@ -1,5 +1,5 @@
 package class09;
-
+// 将单向链表按某值划分为左边小，中间相等，右边大的形式
 public class Code03_SmallerEqualBigger {
 
     public static Node listPartition1(Node head, int pivot) {

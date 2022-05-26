@@ -12,6 +12,11 @@ public class Code04_RadixSort {
 		radixSort(arr, 0, arr.length - 1, maxbits(arr));
 	}
 
+	/**
+	 * 获取数组中最大值的位数  比如 999 是三位 9999 是四位
+	 * @param arr
+	 * @return
+	 */
 	public static int maxbits(int[] arr) {
 		int max = Integer.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) {
