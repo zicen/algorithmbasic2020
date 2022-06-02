@@ -1,10 +1,15 @@
 package class12;
 
 import java.util.ArrayList;
+//二叉搜索树（BST） https://leetcode.cn/problems/validate-binary-search-tree/
 
+/**
+ * 搜索二叉树是指对于任何一个结点，它的左子树的所有结点都比这个根结点要小，它的右子树的所有结点都比这个根结点要大。
+ * 一般不会存在重复元素
+ */
 public class Code02_IsBST {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;

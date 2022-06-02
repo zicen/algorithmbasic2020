@@ -1,5 +1,8 @@
 package class11;
 
+/**
+ * 一张纸折 n 次，打印凹凸状态
+ */
 public class Code07_PaperFolding {
 
 	public static void printAllFolds(int N) {

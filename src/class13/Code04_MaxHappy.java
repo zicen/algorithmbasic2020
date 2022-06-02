@@ -2,10 +2,10 @@ package class13;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// 快乐数  规定父节点来的话，最近子节点就不能来
 public class Code04_MaxHappy {
 
-	public static class Employee {
+	private static class Employee {
 		public int happy;
 		public List<Employee> nexts;
 

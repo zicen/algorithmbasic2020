@@ -4,7 +4,7 @@ package class12;
 public class Code05_MaxSubBSTSize {
 
 	// 提交时不要提交这个类
-	public static class TreeNode {
+	private static class TreeNode {
 		public int val;
 		public TreeNode left;
 		public TreeNode right;

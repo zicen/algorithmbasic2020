@@ -1,10 +1,10 @@
 package class13;
 
 import java.util.ArrayList;
-
+//给定一个二叉树，找到其中最大的二叉搜索树（BST）子树，其中最大指的是子树节点数最多的。注意：子树必须包含其所有后代。 333 付费题
 public class Code02_MaxSubBSTHead {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;
@@ -95,6 +95,7 @@ public class Code02_MaxSubBSTHead {
 				maxSubBSTSize = rightInfo.maxSubBSTSize;
 			}
 		}
+		// X 作为头结点符合二叉搜索树判断
 		if ((leftInfo == null ? true : (leftInfo.maxSubBSTHead == X.left && leftInfo.max < X.value))
 				&& (rightInfo == null ? true : (rightInfo.maxSubBSTHead == X.right && rightInfo.min > X.value))) {
 			maxSubBSTHead = X;

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Code02_EveryStepShowBoss {
 
-	public static class Customer {
+	private static class Customer {
 		public int id;
 		public int buy;
 		public int enterTime;
@@ -19,7 +19,7 @@ public class Code02_EveryStepShowBoss {
 		}
 	}
 
-	public static class CandidateComparator implements Comparator<Customer> {
+	private static class CandidateComparator implements Comparator<Customer> {
 
 		@Override
 		public int compare(Customer o1, Customer o2) {
@@ -28,7 +28,7 @@ public class Code02_EveryStepShowBoss {
 
 	}
 
-	public static class DaddyComparator implements Comparator<Customer> {
+	private static class DaddyComparator implements Comparator<Customer> {
 
 		@Override
 		public int compare(Customer o1, Customer o2) {

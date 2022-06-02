@@ -4,9 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 如果我们把二叉树看做图，父子节点之间的连线看成是双向的，我们姑且定义“距离”为两个节点之间边的个数。写一个程序求一棵二叉树中相距最远的两个节点之间的距离。
+ */
 public class Code06_MaxDistance {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;
@@ -91,33 +94,6 @@ public class Code06_MaxDistance {
 		}
 		return distance1 + distance2 - 1;
 	}
-
-//	public static int maxDistance2(Node head) {
-//		return process(head).maxDistance;
-//	}
-//
-//	public static class Info {
-//		public int maxDistance;
-//		public int height;
-//
-//		public Info(int dis, int h) {
-//			maxDistance = dis;
-//			height = h;
-//		}
-//	}
-//
-//	public static Info process(Node X) {
-//		if (X == null) {
-//			return new Info(0, 0);
-//		}
-//		Info leftInfo = process(X.left);
-//		Info rightInfo = process(X.right);
-//		int height = Math.max(leftInfo.height, rightInfo.height) + 1;
-//		int maxDistance = Math.max(
-//				Math.max(leftInfo.maxDistance, rightInfo.maxDistance),
-//				leftInfo.height + rightInfo.height + 1);
-//		return new Info(maxDistance, height);
-//	}
 
 	public static int maxDistance2(Node head) {
 		return process(head).maxDistance;

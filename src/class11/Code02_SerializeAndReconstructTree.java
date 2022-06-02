@@ -3,7 +3,7 @@ package class11;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
-
+// 先序、后序或者按层遍历的方式序列化和反序列化
 public class Code02_SerializeAndReconstructTree {
     /*
      * 二叉树可以通过先序、后序或者按层遍历的方式序列化和反序列化，

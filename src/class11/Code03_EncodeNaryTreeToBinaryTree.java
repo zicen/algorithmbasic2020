@@ -3,7 +3,8 @@ package class11;
 import java.util.ArrayList;
 import java.util.List;
 
-// 本题测试链接：https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree
+// 本题测试链接：https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree 431
+// 将N叉树编码成二叉树
 public class Code03_EncodeNaryTreeToBinaryTree {
 
 	// 提交时不要提交这个类

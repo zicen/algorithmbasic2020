@@ -2,7 +2,7 @@ package class08;
 
 import java.util.HashMap;
 
-// 该程序完全正确
+// 该程序完全正确  前缀树
 public class Code02_TrieTree {
 
     public static class Trie1 {

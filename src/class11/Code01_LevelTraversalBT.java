@@ -2,7 +2,7 @@ package class11;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
+// 按层遍历二叉树
 public class Code01_LevelTraversalBT {
 
 	private static class Node {

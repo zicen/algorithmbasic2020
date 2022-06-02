@@ -1,8 +1,8 @@
 package class12;
-
+// 判断平衡二叉树
 public class Code03_IsBalanced {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;

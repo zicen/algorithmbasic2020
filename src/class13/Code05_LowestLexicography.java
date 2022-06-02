@@ -3,7 +3,8 @@ package class13;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeSet;
-
+// 贪心  给定一个由字符串组成的数组 strs, 必须把所有的字符串拼接起来，返回所有可能的拼接结果中，字典序最小的结果
+// https://www.nowcoder.com/questionTerminal/d5d1a56491384b2486480730f78f6da2
 public class Code05_LowestLexicography {
 
 	public static String lowestString1(String[] strs) {

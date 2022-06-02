@@ -1,5 +1,8 @@
 package class11;
 
+/**
+ * 给你二叉树中的某个节点，返回该节点的后继节点（后继节点是指中序遍历的后一个节点）
+ */
 public class Code06_SuccessorNode {
 
 	private static class Node {

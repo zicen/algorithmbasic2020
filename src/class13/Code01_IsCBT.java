@@ -1,10 +1,10 @@
 package class13;
 
 import java.util.LinkedList;
-
+// 验证完全二叉树(CBT)
 public class Code01_IsCBT {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;

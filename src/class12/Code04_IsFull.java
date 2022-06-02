@@ -1,5 +1,9 @@
 package class12;
 
+/**
+ * 给定一颗二叉树的头结点 head, 返回这颗二叉树是不是满二叉树
+ * 满二叉树满足 : 2 ^ h - 1 == n
+ */
 public class Code04_IsFull {
 
 	public static class Node {

@@ -3,10 +3,10 @@ package class13;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
+// 求 a b 节点的最近公共祖先 https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
 public class Code03_lowestAncestor {
 
-	public static class Node {
+	private static class Node {
 		public int value;
 		public Node left;
 		public Node right;
