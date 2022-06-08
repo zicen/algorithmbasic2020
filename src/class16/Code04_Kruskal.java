@@ -12,7 +12,7 @@ import java.util.Stack;
 public class Code04_Kruskal {
 
 	// Union-Find Set
-	public static class UnionFind {
+	private static class UnionFind {
 		// key 某一个节点， value key节点往上的节点
 		private HashMap<Node, Node> fatherMap;
 		// key 某一个集合的代表节点, value key所在集合的节点个数

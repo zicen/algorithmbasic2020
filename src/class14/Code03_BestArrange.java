@@ -2,7 +2,7 @@ package class14;
 
 import java.util.Arrays;
 import java.util.Comparator;
-
+// 只有一个会议室，会议有开始时间和结束时间，找到最多能开多少次会议
 public class Code03_BestArrange {
 
 	public static class Program {

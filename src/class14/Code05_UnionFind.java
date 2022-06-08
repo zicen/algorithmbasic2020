@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class Code05_UnionFind {
 
-	public static class Node<V> {
+	private static class Node<V> {
 		V value;
 
 		public Node(V v) {

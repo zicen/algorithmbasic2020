@@ -89,7 +89,7 @@ public class Code02_NumberOfIslands {
 
 	}
 
-	public static class UnionFind1<V> {
+	private static class UnionFind1<V> {
 		public HashMap<V, Node<V>> nodes;
 		public HashMap<Node<V>, Node<V>> parents;
 		public HashMap<Node<V>, Integer> sizeMap;
