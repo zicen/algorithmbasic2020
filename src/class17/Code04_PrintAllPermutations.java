@@ -2,7 +2,7 @@ package class17;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// 打印一个字符串的全部排列
 public class Code04_PrintAllPermutations {
 
 	public static List<String> permutation1(String s) {

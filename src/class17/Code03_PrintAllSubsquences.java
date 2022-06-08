@@ -3,7 +3,7 @@ package class17;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-
+//打印一个字符串的全部子序列
 public class Code03_PrintAllSubsquences {
 
 	// s -> "abc" ->
