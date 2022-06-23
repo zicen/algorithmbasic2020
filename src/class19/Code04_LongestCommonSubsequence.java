@@ -1,6 +1,7 @@
 package class19;
 
 // 这个问题leetcode上可以直接测
+// 多样本位置全对应的尝试模型：2个样本，一个样本做行，一个样本做列，关注i和j对应位置的情况，先填边界，再填中间
 // 链接：https://leetcode.com/problems/longest-common-subsequence/
 public class Code04_LongestCommonSubsequence {
 

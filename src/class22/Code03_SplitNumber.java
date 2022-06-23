@@ -1,5 +1,9 @@
 package class22;
 
+/**
+ * 给定一个正整数n, 求裂开的方法数
+ * 裂开的后一个数不能比前一个数大
+ */
 public class Code03_SplitNumber {
 
 	// n为正数
