@@ -1,9 +1,8 @@
 package alabuladong;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
+import java.util.*;
 
 public class SlidingWindow {
     /* 滑动窗口算法框架 */
@@ -35,6 +34,42 @@ public class SlidingWindow {
                 // 进行窗口内数据的一系列更新 TODO
             }
         }
+    }
+
+    public boolean xxx(String s1, String s2) {
+        Map<Character, Integer> need = new HashMap<>();
+        for (int i = 0; i < s1.length(); i++) {
+            char tmp = s1.charAt(i);
+            need.put(tmp, need.getOrDefault(tmp, 0) + 1);
+        }
+        Map<Character, Integer> window = new HashMap<>();
+        int left = 0, right = 0,start = 0;
+        int n = s2.length();
+        int valid = 0;
+        while (right < n){
+            char c = s2.charAt(right);
+            right++;
+            if (need.containsKey(c)) {
+                window.put(c, window.getOrDefault(c, 0) + 1);
+                if (window.get(c).equals(need.get(c))) {
+                    valid++;
+                }
+            }
+            while (right - left >= s1.length()) {
+                if (valid == need.size()) {
+                    return true;
+                }
+                char d = s2.charAt(left);
+                left++;
+                if (need.containsKey(d)) {
+                    if (need.get(d).equals(window.get(d))) {
+                        valid--;
+                    }
+                    window.put(d, window.getOrDefault(d, 0) - 1);
+                }
+            }
+        }
+        return false;
     }
 
     // 最小覆盖子串
@@ -166,6 +201,27 @@ public class SlidingWindow {
                 window.put(d, window.getOrDefault(d, 0) - 1);
             }
             res = Math.max(res, right - left);
+        }
+        return res;
+    }
+
+    // 滑动窗口最大值
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int n = nums.length;
+        LinkedList<Integer> window = new LinkedList<>();
+        int[] res = new int[n - k + 1];
+        int index = 0;
+        for (int i = 0; i < n; i++) {
+            while (!window.isEmpty() && nums[i] >= nums[window.peekLast()]) {
+                window.pollLast();
+            }
+            window.addLast(i);
+            if (window.peekFirst() == i - k) {
+                window.pollFirst();
+            }
+            if (i >= k - 1) {
+                res[index++] = nums[window.peekFirst()];
+            }
         }
         return res;
     }
